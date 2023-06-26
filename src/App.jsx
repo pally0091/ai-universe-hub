@@ -2,26 +2,19 @@
 import React from "react";
 
 import "./App.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Main from "./Components/Main";
-import Home from "./Components/Home";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      children: [
-        {
-          path: "/",
-          element: <Home></Home>,
-        },
-      ],
-    },
-  ]);
   return (
     <>
-      <RouterProvider router={router}></RouterProvider>
+      <div>
+        <h1
+          id="head-name"
+          className="text-5xl font-bold bg-black text-gray-200 py-4 italic"
+        >
+          AI Universe Hub
+        </h1>
+        <div>items </div>
+      </div>
     </>
   );
 }
