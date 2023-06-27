@@ -1,7 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 
 import "./App.css";
+import ToolCard from "./ToolCard";
 
 function App() {
   const [tools, setTools] = useState();
@@ -21,7 +23,14 @@ function App() {
         >
           AI Universe Hub
         </h1>
-        <div>items </div>
+        <div className="grid grid-cols-3 w-11/12 mx-auto gap-4 mt-3">
+          {tools?.map((tool) => (
+            <ToolCard
+              key={tool.id}
+              tool={tool}
+            ></ToolCard>
+          ))}
+        </div>
         <footer>footer section</footer>
       </div>
     </>
