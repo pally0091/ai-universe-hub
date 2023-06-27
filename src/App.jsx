@@ -23,7 +23,7 @@ function App() {
         >
           AI Universe Hub
         </h1>
-        <div className="grid grid-cols-3 w-11/12 mx-auto gap-4 mt-3">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 max-[320px]:grid-cols-1 w-11/12 mx-auto gap-4 mt-3">
           {tools?.map((tool) => (
             <ToolCard
               key={tool.id}
